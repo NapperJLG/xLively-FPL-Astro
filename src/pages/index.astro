@@ -9,3 +9,12 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 	this is the blog
 	<BlogGrid posts={allPosts} />
 </Site>
+
+<style is:global>
+	* {
+		font-family: 'Roboto', sans-serif, monospace;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+</style>

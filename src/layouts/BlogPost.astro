@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header/Header'
+
 const { content } = Astro.props;
 const { title, description, publishDate, author, heroImage, permalink, alt } = content;
 ---
@@ -6,9 +8,11 @@ const { title, description, publishDate, author, heroImage, permalink, alt } = c
 <html lang={content.lang || 'en' }>
 
 <head>
+  <link rel="stylesheet" href="/src/global.scss" type="text/css" />
 </head>
 
 <body>
+  <Header />
   <div class="wrapper">
     <h1>{title}</h1>
     <slot />
