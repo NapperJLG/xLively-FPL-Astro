@@ -1,7 +1,7 @@
 const BlogGrid = ({ posts }) => {
   return (
     <div>
-      {posts && posts.map((post) => <p>{post.frontmatter.title}</p>)}
+      {posts && posts.map((post) => <a href={post.url}>{post.frontmatter.title}</a>)}
     </div>
 
   )
