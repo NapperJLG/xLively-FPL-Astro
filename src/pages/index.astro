@@ -1,6 +1,6 @@
 ---
 import Site from '../layouts/Site.astro'
-import BlogGrid from '../components/BlogGrid'
+import BlogGrid from '../components/BlogGrid.astro'
 let allPosts = await Astro.glob('./posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ---

@@ -1,0 +1,17 @@
+---
+import PostPreview from "./PostPreview.astro"
+const { posts } = Astro.props
+---
+
+<div class="container">
+  {posts && posts.map((post) =>
+  <PostPreview url={post.url} title={post.frontmatter.title} />)}
+</div>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+  }
+</style>

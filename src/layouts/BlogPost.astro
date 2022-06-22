@@ -1,8 +1,8 @@
 ---
-import Header from '../components/Header/Header'
+import Header from '../components/Header.astro'
 
 const { content } = Astro.props;
-const { title, description, publishDate, author, heroImage, permalink, alt } = content;
+const { title } = content;
 ---
 
 <html lang={content.lang || 'en' }>
