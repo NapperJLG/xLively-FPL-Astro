@@ -5,13 +5,18 @@ const { posts } = Astro.props
 
 <div class="container">
   {posts && posts.map((post) =>
-  <PostPreview url={post.url} title={post.frontmatter.title} />)}
+  <PostPreview {post} />)}
 </div>
 
 <style>
   .container {
     display: flex;
-    flex-direction: row;
-    background-color: red;
+    flex-direction: column;
+    background-color: #ededed;
+    margin: 0 auto;
+    padding: 0 100px;
+    width: 70%;
+    height: 100vh;
+    flex-wrap: wrap;
   }
 </style>

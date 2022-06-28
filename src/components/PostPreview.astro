@@ -1,18 +1,66 @@
 ---
-const { url, title } = Astro.props
+const { post } = Astro.props
 ---
 
-<div class='container'>
-  <a href={url}>
-    <h2>{title}</h2>
-  </a>
-</div>
+<a class="container" href={post.url}>
+  <div class="image-container">
+    <img src={post.frontmatter.heroImage} width="100%" height="auto" />
+  </div>
+  <section class="post-info">
+    <h2>{post.frontmatter.title}</h2>
+    <span>{post.frontmatter.description}</span>
+    <em>{post.frontmatter.publishDate}</em>
+  </section>
+</a>
 
 <style>
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+
+  a:hover img {
+    transform: scale(1.1);
+  }
+
+  h2,
+  span,
+  em {
+    text-align: center;
+  }
+
+  img {
+    border-radius: 8px 8px 0 0;
+    transition: all 0.3s;
+  }
+
+
   .container {
-    height: 400px;
-    width: 200px;
-    background-color: red;
-    margin-right: 8px;
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    width: auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-top: 16px;
+    overflow: hidden;
+  }
+
+  .image-container {
+    width: 20%;
+    min-width: 270px;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+  }
+
+  .post-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 16px 0;
   }
 </style>
