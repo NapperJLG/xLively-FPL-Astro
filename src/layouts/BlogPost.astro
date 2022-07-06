@@ -1,5 +1,6 @@
 ---
 import Header from '../components/Header.astro'
+import BlogPost from '../components/BlogPost.astro';
 
 const { content } = Astro.props;
 const { title } = content;
@@ -13,10 +14,10 @@ const { title } = content;
 
 <body>
   <Header />
-  <div class="wrapper">
-    <h1>{title}</h1>
+  <BlogPost {content}>
     <slot />
-  </div>
+  </BlogPost>
+
 </body>
 
 </html>

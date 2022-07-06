@@ -1,0 +1,40 @@
+---
+const { content } = Astro.props
+console.log(content)
+---
+
+<div class="container">
+  <h1>{content.title}</h1>
+  <img class="hero-image" src={content.heroImage}>
+  <section class="content">
+    <slot />
+  </section>
+
+</div>
+
+<style>
+  .container {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content {
+    width: 60%;
+    margin-top: 16px;
+  }
+
+  .content :global(* + *) {
+    margin-top: 16px;
+  }
+
+  img {
+    width: 10%;
+  }
+
+  .hero-image {
+    width: 50%;
+    margin-top: 16px;
+  }
+</style>
