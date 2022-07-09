@@ -6,14 +6,20 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 ---
 
 <Site>
+	<h2>The irrelevant musings of an FPL addict...</h2>
 	<BlogGrid posts={allPosts} />
 </Site>
 
-<style is:global>
-	* {
+<style>
+	* :global {
 		font-family: 'Roboto', sans-serif, monospace;
 		margin: 0;
 		padding: 0;
 		border: 0;
+	}
+
+	h2 {
+		text-align: center;
+		margin-top: 32px;
 	}
 </style>
