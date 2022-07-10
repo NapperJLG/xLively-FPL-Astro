@@ -16,6 +16,10 @@ import Site from '../layouts/Site.astro'
 </Site>
 
 <style>
+  img {
+    width: 50%
+  }
+
   .container {
     padding: 24px 0;
     display: flex;
@@ -33,5 +37,15 @@ import Site from '../layouts/Site.astro'
 
   .content :global(* + *) {
     margin-top: 16px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    img {
+      width: 90%
+    }
+
+    .content {
+      width: 90%
+    }
   }
 </style>
