@@ -1,5 +1,6 @@
 ---
 import Site from '../layouts/Site.astro'
+import previous from '../../public/assets/previous.png'
 ---
 
 <Site>
@@ -7,7 +8,7 @@ import Site from '../layouts/Site.astro'
     <h1>About</h1>
     <section class="content">
       <p>The FPL blog of <a href="https://twitter.com/xlivelyFPL" target="_blank">@xLivelyFPL</a></p>
-      <img src="public/assets/previous.png" width="50%" />
+      <img src={previous} width="50%" />
       <p>A 10+ year veteran of the game hoping looking to document his thoughts over the course of the season.
         Hopefully you find something entertaining or informative along the way!</p>
     </section>
