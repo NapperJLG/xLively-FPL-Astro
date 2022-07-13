@@ -13,7 +13,7 @@ const { post } = Astro.props
   </section>
 </a>
 
-<style>
+<style lang="scss">
   a {
     text-decoration: none;
     color: black;
@@ -53,6 +53,30 @@ const { post } = Astro.props
     height: 40%;
     object-fit: cover;
     overflow: hidden;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .container:first-child {
+      width: 90%;
+      height: 250px;
+      flex-direction: row;
+      margin-bottom: 32px;
+
+      img {
+        min-height: 250px;
+      }
+
+      .image-container {
+        height: 100%;
+        width: 50%;
+        min-width: 450px;
+      }
+
+      .post-info {
+        height: auto;
+        margin: 32px auto;
+      }
+    }
   }
 
   .post-info {
