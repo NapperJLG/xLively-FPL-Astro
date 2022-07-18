@@ -18,3 +18,19 @@ p {
 h1 {
   font-size: 2em;
 }
+
+.content {
+  img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    img {
+      width: 100%
+    }
+  }
+}
