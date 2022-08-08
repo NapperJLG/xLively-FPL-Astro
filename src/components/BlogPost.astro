@@ -5,6 +5,7 @@ console.log(content)
 
 <div class="container">
   <h1>{content.title}</h1>
+  <h3><a href="https://twitter.com/xlivelyFPL" target="_blank">@xLivelyFPL</a></h3>
   <img class="hero-image" src={content.heroImage}>
   <section class="content">
     <slot />
@@ -15,6 +16,10 @@ console.log(content)
 <style>
   h1 {
     text-align: center;
+  }
+
+  h3 {
+    margin-top: 16px;
   }
 
   .container {
